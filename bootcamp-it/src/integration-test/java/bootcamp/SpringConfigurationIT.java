@@ -42,7 +42,7 @@ public class SpringConfigurationIT {
         env.put("SPRING_PROFILES_ACTIVE", "cloud");
 
         Duration timeout = Duration.ofMinutes(5);
-        servicesDeployer.deployService(applicationName, mysqlSvc, "p-mysql", "100mb")
+        servicesDeployer.deployService(applicationName, mysqlSvc, "cleardb", "spark")
                 // <1>
                 .then(
                         applicationDeployer.deployApplication(jar, applicationName, env, timeout,
