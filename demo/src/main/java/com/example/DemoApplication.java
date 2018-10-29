@@ -13,41 +13,41 @@ import javax.persistence.Id;
 @SpringBootApplication
 public class DemoApplication {
 
- public static void main(String[] args) {
-  // <2>
-  SpringApplication.run(DemoApplication.class, args);
- }
+    public static void main(String[] args) {
+        // <2>
+        SpringApplication.run(DemoApplication.class, args);
+    }
 }
 
 // <3>
 @Entity
 class Cat {
 
- @Id
- @GeneratedValue
- private Long id;
+    @Id
+    @GeneratedValue
+    private Long id;
 
- private String name;
+    private String name;
 
- Cat() {
- }
+    Cat() {
+    }
 
- public Cat(String name) {
-  this.name = name;
- }
+    public Cat(String name) {
+        this.name = name;
+    }
 
- @Override
- public String toString() {
-  return "Cat{" + "id=" + id + ", name='" + name + '\'' + '}';
- }
+    @Override
+    public String toString() {
+        return "Cat{" + "id=" + id + ", name='" + name + '\'' + '}';
+    }
 
- public Long getId() {
-  return id;
- }
+    public Long getId() {
+        return id;
+    }
 
- public String getName() {
-  return name;
- }
+    public String getName() {
+        return name;
+    }
 }
 
 // <4>
