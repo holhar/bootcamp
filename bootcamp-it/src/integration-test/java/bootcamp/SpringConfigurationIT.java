@@ -86,8 +86,8 @@ public class SpringConfigurationIT {
 
         CloudFoundryOperations cloudFoundryOperations = DefaultCloudFoundryOperations.builder()
                 .cloudFoundryClient(reactorClient)
-                .organization("holhar")
-                .space("development")
+                .organization("<CF-ORGANIZATION-HERE>")
+                .space("<CF-SPACE-HERE>")
                 .build();
 
         return cloudFoundryOperations;
